@@ -1,5 +1,4 @@
-# The Tortoise and the Hare
+# The Tortoise and the Hare in TLA+
 
-Floyd's Cycle Detection Algorithm. Invented by Robert Floyd in the 1960s. Thanks to [Javascript Allongé by Reginald Braithwaite](https://leanpub.com/javascriptallongesix/read#tortoises) for the reference.
-
+An implementation of Robert Floyd's cycle detection algorithm, in PlusCal.
 
