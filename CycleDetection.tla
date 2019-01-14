@@ -2,10 +2,13 @@
 
 EXTENDS Naturals
 
-CONSTANTS N, NIL
+CONSTANTS N
+
+ASSUME N \in Nat
 
 Nodes == 1..N
 
+NIL == CHOOSE NIL : NIL \notin Nodes
 
 (*
 --fair algorithm TortoiseAndHare
@@ -113,5 +116,5 @@ PartialCorrectness == pc="Done" => (cycle <=> HasCycle(start))
 
 =============================================================================
 \* Modification History
-\* Last modified Sun Oct 15 19:33:20 PDT 2017 by lhochstein
+\* Last modified Sun Dec 23 10:51:33 PST 2018 by lhochstein
 \* Created Sun Oct 15 17:34:00 PDT 2017 by lhochstein
