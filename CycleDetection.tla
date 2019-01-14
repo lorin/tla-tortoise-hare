@@ -110,6 +110,14 @@ TC(R) ==
 
 HasCycle(node) == LET R == {<<s, t>> \in Nodes \X (Nodes \union {NIL}): succ[s] = t }
                   IN <<node, NIL>> \notin TC(R)
+
+
+\* An alternate definition of HasCycle
+
+HasCycle2(node) ==
+  LET R == {<<s, t>> \in Nodes \X (Nodes \union {NIL}): succ[s] = t }
+  IN \E n \in Nodes : /\ <<node, n>> \in TC(R) 
+                      /\ <<n, n>> \in TC(R)
                   
 PartialCorrectness == pc="Done" => (cycle <=> HasCycle(start))
 
